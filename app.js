@@ -30,7 +30,7 @@ promiseObj.catch((err) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("hello"); //this will show the content written on the browser
+  res.send("Home page"); //this will show the content written on the browser
 });
 
 app.get("/blogs", (req, res) => {
@@ -48,7 +48,6 @@ app.get("/blogs", (req, res) => {
 
 app.get("/blogs/id/:id", (req, res) => {
   const id = req.params.id;
-  res.send(`blog ${id}`);
   blogpost
     .findById(id)
     .then((data) => {

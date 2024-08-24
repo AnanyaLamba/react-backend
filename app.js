@@ -63,8 +63,6 @@ app.get("/blogs/id/:id", (req, res) => {
 });
 
 app.use(express.json());
-
-
 app.post("/blogs", (req, res) => {
   const data = req.body;
   // res.send("this is my data");
